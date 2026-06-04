@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boreal — Heladería Artesanal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-logo"> Boreal</div>
+    <nav class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#menu">Menú</a>
+      <a href="#nosotros">Nosotros</a>
+    </nav>
+    <button class="cart-btn" id="cartToggle">
+      🛒 <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-blobs">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-sub">Artesanal · Natural · Delicioso</p>
+      <h1 class="hero-title">El helado perfecto<br /><span>te está esperando</span></h1>
+      <p class="hero-desc">Elaborados con ingredientes frescos, sin conservantes. Más de 30 sabores únicos para cada
+        momento.</p>
+      <a href="#menu" class="btn-primary">Ver el Menú ↓</a>
+    </div>
+
+
+    <div class="hero-image">
+      <img src="img/fondo.png" alt="Helado artesanal" class="hero-img" />
+    </div>
+  </section>
+
+
+  <section class="menu-section" id="menu">
+    <h2 class="section-title">Nuestros Helados</h2>
+    <p class="section-sub">Cada cucharada, una experiencia</p>
+
+    <!-- CATEGORÍAS (justo encima de los productos) -->
+    <div class="cat-grid" id="categorias">
+      <div class="cat-card active" data-cat="todos"><span class="cat-icon">🌈</span><span>Todos</span></div>
+      <div class="cat-card" data-cat="clasicos"><span class="cat-icon">🍦</span><span>Clásicos</span></div>
+      <div class="cat-card" data-cat="frutas"><span class="cat-icon">🍓</span><span>Frutas</span></div>
+      <div class="cat-card" data-cat="premium"><span class="cat-icon">✨</span><span>Premium</span></div>
+      <div class="cat-card" data-cat="sorbetes"><span class="cat-icon">🧊</span><span>Sorbetes</span></div>
+      <div class="cat-card" data-cat="sundaes"><span class="cat-icon">🍨</span><span>Sundaes</span></div>
+    </div>
+
+    <!-- PRODUCTOS -->
+    <div class="products-grid" id="productsGrid">
+
+      <!-- CLÁSICOS -->
+      <div class="product-card" data-cat="clasicos">
+        <img src="img/vainilla.png" alt="Vainilla Francesa" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge">Clásico</div>
+          <h3>Vainilla Francesa</h3>
+          <p>Suave y cremosa con vainilla bourbon auténtica</p>
+          <div class="product-footer">
+            <span class="product-price">$4.500</span>
+            <button class="add-btn" data-name="Vainilla Francesa" data-price="4500"
+              data-icon="🍦">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="clasicos">
+        <img src="img/chocolate.png" alt="Chocolate Belga" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge">Clásico</div>
+          <h3>Chocolate Belga</h3>
+          <p>Intenso, oscuro, con trozos de chocolate al 70%</p>
+          <div class="product-footer">
+            <span class="product-price">$5.000</span>
+            <button class="add-btn" data-name="Chocolate Belga" data-price="5000" data-icon="🍫">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="clasicos">
+        <img src="img/cookies.png" alt="Cookies & Cream" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge">Clásico</div>
+          <h3>Cookies & Cream</h3>
+          <p>Crema de vainilla con galletas Oreo trituradas</p>
+          <div class="product-footer">
+            <span class="product-price">$5.500</span>
+            <button class="add-btn" data-name="Cookies & Cream" data-price="5500" data-icon="🍪">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FRUTAS -->
+      <div class="product-card" data-cat="frutas">
+        <img src="img/fresa.png" alt="Fresa Natural" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge frutas">Frutas</div>
+          <h3>Fresa Natural</h3>
+          <p>Con fresas frescas de temporada, sin colorantes</p>
+          <div class="product-footer">
+            <span class="product-price">$4.500</span>
+            <button class="add-btn" data-name="Fresa Natural" data-price="4500" data-icon="🍓">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="frutas">
+        <img src="img/mango.png" alt="Mango Tropical" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge frutas">Frutas</div>
+          <h3>Mango Tropical</h3>
+          <p>Mango maduro con un toque de maracuyá</p>
+          <div class="product-footer">
+            <span class="product-price">$4.500</span>
+            <button class="add-btn" data-name="Mango Tropical" data-price="4500" data-icon="🥭">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="frutas">
+        <img src="img/limon.png" alt="Limón Frappé" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge frutas">Frutas</div>
+          <h3>Limón Frappé</h3>
+          <p>Cítrico y refrescante, con ralladura de limón</p>
+          <div class="product-footer">
+            <span class="product-price">$4.000</span>
+            <button class="add-btn" data-name="Limón Frappé" data-price="4000" data-icon="🍋">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="frutas">
+        <img src="img/arandanos.png" alt="Arándanos Silvestres" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge frutas">Frutas</div>
+          <h3>Arándanos Silvestres</h3>
+          <p>Arándanos azules frescos con crema batida</p>
+          <div class="product-footer">
+            <span class="product-price">$5.000</span>
+            <button class="add-btn" data-name="Arándanos Silvestres" data-price="5000" data-icon="🫐">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="premium">
+        <img src="img/nutella.png" alt="Nutella & Avellana" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge premium">Premium</div>
+          <h3>Nutella & Avellana</h3>
+          <p>Crema de avellanas importada con caramelo salado</p>
+          <div class="product-footer">
+            <span class="product-price">$7.000</span>
+            <button class="add-btn" data-name="Nutella & Avellana" data-price="7000" data-icon="🌰">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="premium">
+        <img src="img/pistacho.png" alt="Pistacho Siciliano" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge premium">Premium</div>
+          <h3>Pistacho Siciliano</h3>
+          <p>Pistachos tostados importados de Sicilia</p>
+          <div class="product-footer">
+            <span class="product-price">$7.500</span>
+            <button class="add-btn" data-name="Pistacho Siciliano" data-price="7500" data-icon="🫚">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="premium">
+        <img src="img/cafe.png" alt="Café Espresso" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge premium">Premium</div>
+          <h3>Café Espresso</h3>
+          <p>Doble shot de espresso con crema chantilly</p>
+          <div class="product-footer">
+            <span class="product-price">$6.500</span>
+            <button class="add-btn" data-name="Café Espresso" data-price="6500" data-icon="☕">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SORBETES -->
+      <div class="product-card" data-cat="sorbetes">
+        <img src="img/coco.png" alt="Sorbete de Coco" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge sorbetes">Sorbete</div>
+          <h3>Sorbete de Coco</h3>
+          <p>100% vegano, con leche de coco orgánico</p>
+          <div class="product-footer">
+            <span class="product-price">$4.500</span>
+            <button class="add-btn" data-name="Sorbete de Coco" data-price="4500" data-icon="🥥">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="sorbetes">
+        <img src="img/sandia.png" alt="Sorbete de Sandía" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge sorbetes">Sorbete</div>
+          <h3>Sorbete de Sandía</h3>
+          <p>Ligero y sin lácteos, pura sandía natural</p>
+          <div class="product-footer">
+            <span class="product-price">$4.000</span>
+            <button class="add-btn" data-name="Sorbete de Sandía" data-price="4000" data-icon="🍉">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="sundaes">
+        <img src="img/clasico.png" alt="Sundae Clásico" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge sundae-b">Sundae</div>
+          <h3>Sundae Clásico</h3>
+          <p>Vainilla, salsa de chocolate, nueces y cereza</p>
+          <div class="product-footer">
+            <span class="product-price">$8.000</span>
+            <button class="add-btn" data-name="Sundae Clásico" data-price="8000" data-icon="🍨">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="sundaes">
+        <img src="img/frutos.png" alt="Sundae Frutos Rojos" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge sundae-b">Sundae</div>
+          <h3>Sundae Frutos Rojos</h3>
+          <p>Base de fresa, coulis de frambuesa y chantilly</p>
+          <div class="product-footer">
+            <span class="product-price">$9.000</span>
+            <button class="add-btn" data-name="Sundae Frutos Rojos" data-price="9000" data-icon="🍒">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="nosotros" id="nosotros">
+    <div class="nosotros-inner">
+      <div class="nosotros-text">
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos una heladería artesanal con más de <strong>15 años</strong> endulzando tu día. Usamos solo ingredientes
+          naturales, sin colorantes artificiales ni conservantes.</p>
+        <p>Cada sabor es una receta cuidada, pensada para que cada cucharada sea una experiencia única e inolvidable. 🍦
+        </p>
+        <div class="stats">
+          <div class="stat"><span>30+</span>
+            <p>Sabores</p>
+          </div>
+          <div class="stat"><span>15</span>
+            <p>Años</p>
+          </div>
+          <div class="stat"><span>100%</span>
+            <p>Natural</p>
+          </div>
+        </div>
+      </div>
+
+      <img src="img/lugar.png" alt="Nuestra tienda" class="nosotros-img-real" />
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>🍦 <strong>Boreal</strong> — Heladería Artesanal</p>
+    <p>📍 Calle Dulce #12 · Tel: 310 000 0000 · Abierto todos los días 10am–10pm</p>
+    <p class="footer-copy">© 2025 Boreal. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h2>🛒 Tu Carrito</h2>
+    <button class="cart-close" id="cartClose">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty" id="cartEmpty">
+      <span>🍦</span>
+      <p>Tu carrito está vacío</p>
+      <small>¡Agrega algo delicioso!</small>
+    </div>
+  </div>
+  <div class="cart-summary" id="cartSummary" style="display:none">
+    <div class="cart-total">
+      <span>Total:</span>
+      <strong id="cartTotal">$0</strong>
+    </div>
+    <button class="btn-checkout">Realizar Pedido 🍧</button>
+    <button class="btn-clear">Vaciar carrito</button>
+  </div>
+</div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
